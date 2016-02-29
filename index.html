@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="moxieprocess.js"></script>
+<script src="main.js"></script>
+<script async src="moxiecpu.js" onload="OnAsmJsLoaded()"></script>
+</head>
+<body>
+<select id="program" name="program" onchange="OnProgramChange()">
+<option value="binarytrees">binarytrees</option>
+<option value="fasta">fasta</option>
+<option value="fannkuchredux">fannkuchredux</option>
+<option value="nbody">nbody</option>
+<option value="lissa">lissa</option>
+</select>
+<input id="args" type="text">
+<button onclick="OnRunClick()">Run</button>
+<p>stdout:
+<pre id="stdout"></pre>
+<p>stderr:
+<pre id="stderr"></pre>
+<canvas id="canvas"></canvas>
+</body>
+</html>
